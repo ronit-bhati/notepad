@@ -14,13 +14,13 @@ gui_height = 400
 root.geometry(f"{gui_width}x{gui_height}")
 
 
-def new_file(event):
+def new_file(event=None):
     global current_file
     root.title("Untitled - Note It Up")
     current_file = None
     text_screen.delete(1.0, END)
 
-def open_file(event):
+def open_file(event=None):
     global current_file
     current_file = askopenfilename(defaultextension=".txt", filetypes=[("All Files", "*.*"), ("Text Documents", "*.txt")])
     
@@ -33,7 +33,7 @@ def open_file(event):
         text_screen.insert(1.0, f.read())
         f.close()
 
-def save_file(event):
+def save_file(event=None):
     global current_file
     if current_file == None:
         current_file = asksaveasfilename(initialfile="Untitled.txt", defaultextension=".txt", filetypes=[("All Files", "*.*"), ("Text Documents", "*.txt")])
