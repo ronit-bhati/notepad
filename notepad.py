@@ -6,7 +6,6 @@ from tkinter.filedialog import askopenfilename, asksaveasfilename
 
 root = Tk()
 root.title("Note It Up")
-root.wm_iconbitmap("noteicon.ico")
 
 
 gui_width = 600
